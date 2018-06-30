@@ -1,0 +1,26 @@
+** About this repository
+
+I currently have two active keyboard projects within the AutoHotkey environment: [[https://github.com/StevenTammen/hieam][a personal keyboard remapping project]], and a [[https://github.com/StevenTammen/unicode-language-layers][project for multilingual Unicode entry]].
+
+My personal project is quite a bit more sophisticated at present. However, much of the behavior therein is rather hard-coded. Over time, I will try and abstract functionality out into this repository so that it can more easily be used by others. Below are some of the components that will hopefully find their way into this repository long term.
+
+** A robust autospacing/autocapitalization/nesting API
+
+- Functions that return arrays of keys to be sent, depending on the mode
+- Autocapitalization after Enter and things like .?!'
+- Automatic generation of matched entities like "" '' () [] {} and so forth
+
+** Improved modifier behavior
+
+Among other things, the library will will support
+
+- Abstraction of modifier behavior from layer behavior; the ability to type in other alphabets while retaining native-language modifier combinations.
+- Single-use prefix behavior for modifiers, along with the standard holding behavior.
+- Intuitive behavior customization through dynamic function calls and customizable layers.
+- Pass through shift behavior; if shift is the only modifier, execution will be passed to the shift layer rather than sending a shift+key modifier combination. This is important for supporting custom shift layer behavior as opposed to only supporting the default mappings like [,<] [.>] [/?].
+
+** Dynamic regular expression hotstrings
+
+Various use cases will be defined with templates. For example: normal text replacement (wo --> without), backslashed entities (\pi --> π), and so forth.
+
+Word boundaries and capitalization behavior will have to be handled on a per-implementation basis, but I will try to generalize the associative arrays to make defining the necessary values as easy as possible.
