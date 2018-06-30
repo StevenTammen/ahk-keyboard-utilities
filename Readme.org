@@ -21,6 +21,6 @@ Among other things, the library will will support
 
 ** Dynamic regular expression hotstrings
 
-Various use cases will be defined with templates. For example: normal text replacement (wo --> without), backslashed entities (\pi --> π), and so forth.
+Various use cases will be defined with templates. For example: normal text replacement (=wo= --> without), backslashed entities (=\pi= --> π), and so forth.
 
 Word boundaries and capitalization behavior will have to be handled on a per-implementation basis, but I will try to generalize the associative arrays to make defining the necessary values as easy as possible.
